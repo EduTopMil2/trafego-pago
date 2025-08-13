@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções Profissionais para Seu Negócio</title>
+    <meta name="description" content="Transforme seu negócio com nossas soluções especializadas. Solicite um orçamento agora!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seusite.com/">
+    <meta property="og:title" content="Soluções Profissionais para Seu Negócio">
+    <meta property="og:description" content="Transforme seu negócio com nossas soluções especializadas. Solicite um orçamento agora!">
+    <meta property="og:image" content="https://placehold.co/1200x630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://seusite.com/">
+    <meta property="twitter:title" content="Soluções Profissionais para Seu Negócio">
+    <meta property="twitter:description" content="Transforme seu negócio com nossas soluções especializadas. Solicite um orçamento agora!">
+    <meta property="twitter:image" content="https://placehold.co/1200x630">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c7be5;
+            --primary-dark: #1a68d2;
+            --secondary: #6e84a3;
+            --light: #f9fbfd;
+            --dark: #12263a;
+            --success: #00d97e;
+            --warning: #f6c343;
+            --danger: #e63757;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f6f9fc 0%, #e7eff8 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-large {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+        
+        .features {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark);
+        }
+        
+        .section-title p {
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .testimonials {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 0 15px;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+        }
+        
+        .testimonial-role {
+            color: var(--secondary);
+            font-size: 14px;
+        }
+        
+        .lead-form {
+            background: linear-gradient(135deg, #2c7be5 0%, #1a68d2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h2 {
+            color: var(--dark);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 32px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #a8b5c4;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a8b5c4;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">LeadConvert</div>
+                <div class="nav-links">
+                    <a href="#features">Recursos</a>
+                    <a href="#testimonials">Depoimentos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                <a href="#form" class="cta-button">Solicitar Orçamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero animated">
+        <div class="container">
+            <h1>Transforme seu negócio com nossas soluções</h1>
+            <p>Nossa equipe especializada está pronta para ajudar você a alcançar melhores resultados e impulsionar suas vendas com estratégias comprovadas.</p>
+            <a href="#form" class="cta-button cta-large">Fale com um Especialista</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como podemos ajudar seu negócio</h2>
+                <p>Nossos serviços são projetados para alavancar seu negócio e maximizar seus resultados</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Análise de Mercado</h3>
+                    <p>Identificamos oportunidades e tendências para posicionar seu negócio à frente da concorrência.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Campanhas otimizadas</h3>
+                    <p>Criação e gestão de campanhas digitais com máxima eficiência para melhor ROI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Geração de Leads</h3>
+                    <p>Estratégias comprovadas para atrair clientes qualificados e aumentar suas vendas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Conversão Mobile</h3>
+                    <p>Otimização completa para dispositivos móveis e experiências de usuário perfeitas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-funnel-dollar"></i>
+                    </div>
+                    <h3>Otimização de Funil</h3>
+                    <p>Análise e melhoria contínua de cada estágio do ciclo de vendas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Relatórios Detalhados</h3>
+                    <p>Transparência completa com relatórios mensais detalhados de desempenho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que nossos clientes dizem</h2>
+                <p>Veja como ajudamos empresas como a sua a alcançar resultados excepcionais</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Depois que começamos a trabalhar com a LeadConvert, nossas vendas aumentaram em 150% em apenas 3 meses. O ROI foi impressionante!"</p>
+                    <p class="testimonial-author">Carlos Silva</p>
+                    <p class="testimonial-role">Diretor de Marketing, TechSolutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form" id="form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Solicite um orçamento</h2>
+                <form id="leadForm" action="https://your-lead-handler.com/submit" method="POST">
+                    <input type="hidden" name="utm_source" value="google_ads">
+                    <input type="hidden" name="utm_campaign" value="lead_generation">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Nome da empresa</label>
+                        <input type="text" id="empresa" name="empresa" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail corporativo</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone (com WhatsApp)</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="segmento">Segmento de atuação</label>
+                        <select id="segmento" name="segmento" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option value="tecnologia">Tecnologia</option>
+                            <option value="saude">Saúde</option>
+                            <option value="educacao">Educação</option>
+                            <option value="varejo">Varejo</option>
+                            <option value="servicos">Serviços</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="faturamento">Faturamento mensal</label>
+                        <select id="faturamento" name="faturamento" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option value="ate50">Até R$ 50 mil</option>
+                            <option value="50a100">R$ 50 a 100 mil</option>
+                            <option value="100a500">R$ 100 a 500 mil</option>
+                            <option value="500a1">R$ 500 mil a 1 milhão</option>
+                            <option value="acima1">Acima de R$ 1 milhão</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Como podemos ajudar? (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" class="form-control" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="consentimento" name="consentimento" required>
+                        <label for="consentimento" style="display: inline;">Concordo em receber comunicações da LeadConvert</label>
+                    </div>
+                    
+                    <button type="submit" class="form-button">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sobre nós</h3>
+                    <p>Especialistas em geração de leads qualificados e marketing digital para pequenas e médias empresas.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links úteis</h3>
+                    <div class="footer-links">
+                        <a href="#features">Nossos serviços</a>
+                        <a href="#testimonials">Depoimentos</a>
+                        <a href="#form">Solicitar orçamento</a>
+                        <a href="#">Política de privacidade</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <div class="footer-links">
+                        <a href="mailto:contato@leadconvert.com.br">contato@leadconvert.com.br</a>
+                        <a href="tel:+5511999999999">(11) 99999-9999</a>
+                        <p>São Paulo - SP</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 LeadConvert. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission (in a real scenario, you would use AJAX or let the form submit normally)
+            const formData = new FormData(this);
+            const formProps = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', formProps);
+            
+            // Show success message
+            alert('Obrigado pelo seu interesse! Nossa equipe entrará em contato em breve.');
+            
+            // Reset form
+            this.reset();
+            
+            // Optionally redirect to thank you page
+            // window.location.href = '/obrigado';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Track form views (for Google Ads conversion tracking)
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.href.indexOf('#form') > -1) {
+                console.log('Form view tracked for conversion');
+                // gtag('event', 'form_view', { 'event_category': 'conversion' });
+            }
+        });
+
+        // Enhanced phone field validation
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+            
+            // Format phone number (XX) XXXXX-XXXX
+            let formatted = value;
+            if (value.length > 2) {
+                formatted = '(' + value.slice(0, 2) + ') ' + value.slice(2);
+            }
+            if (value.length > 7) {
+                formatted = formatted.slice(0, 9) + '-' + formatted.slice(9);
+            }
+            
+            this.value = formatted;
+        });
+
+        // Simple animation on scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.feature-card, .testimonial, .form-container');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on load
+    </script>
+</body>
+</html>
